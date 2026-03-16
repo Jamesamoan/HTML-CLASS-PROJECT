@@ -2,13 +2,44 @@
 <html>
     <head>
         <title>Froms for a Job</title>
+        <style>
+            /*Attribute Seletor*/
+            input[type='text']{
+                border-width: 2px;
+                border-style: dashed;
+                border-color: rgb(250, 2, 2);
+            }
+            /*Child Seletor*/
+            ul>li{
+                list-style-type: circle;
+                color: aqua;
+                font-size:10px;
+            }
+            /*Sibling Seletor*/
+            h3+p{
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+
+        </style>
     </head>
     <body>
+        
+       <ul>
+        <li>
+            <h1>A Para</h1>
+        <h1>A Para</h1>
+        <h1>A Para</h1>
+        <h1>A Para</h1>
+    </li>
+    </ul>
+    <h3>Jobs</h3>
+    <p>forms</p>
         <fieldset>
             <legend>Pesenol <Details></Details></legend>
         <h1>Froms for a Job</h1>
         <froms>
             <label>Name:</label>
+            
             <input type="text">
             <br><br>
              <label>Father name:</label>
@@ -28,6 +59,8 @@
             <br>
             <br>
         </fieldset>
+        <h4>Jobs</h4>
+        <p>forms</p>
         
             <label>Age</label>
             <input type="number" min="18" max="35">
