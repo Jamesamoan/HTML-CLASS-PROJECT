@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <tittle>JS Funtcion</tittle>
+    </head>
+    <body>
+        <button onclick="myfuntion(8)">Excute JS Funtion</button>
+        <script>
+        function myfuntion(c,v)
+        {
+            if (v===undefined){
+                v = 2;
+            }
+            document.write(c*v)
+        }
+        </script>
+        <p>A funtcion can access variables defined inside the funtcion:</p>
+        <button type="button" onclick="myfunction()">Click me</button>
+        <p id="demo"></p>
+        <p id="demo1"></p>
+        <script>
+            var b = 7;
+            function myfunction(){
+                var a =3;
+                document.getElementById("demo").innerHTML = a + b;
+            }
+             document.getElementById("demo1").innerHTML= a;
+              document.getElementById("demo2").innerHTML= b;
+        </script>
+    </body>
+</html>
