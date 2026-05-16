@@ -1,0 +1,61 @@
+<!DOCTYPE html> 
+<html>
+    <body> 
+        <h1>Pet Adoption Profile</h1>
+        <p>Click the button to view a pet avaible for adoption!</p>
+        <button onclick="showProfile()">View pet</button>
+        <div class="card" id="card">
+            <h2>Jack</h2>
+            <div id="output"></div> 
+        </div>
+        <script>
+            function display(val){
+                if (val === null) return "<span class='badge-empty'>Not Available</span>";
+                if (val === undefined) return "<span class='badge-empty'>Not Provided</span>";
+                if (val === true) return "<span class='badge-yes'></span>";
+                if (val === false) return "<span class='badge-no'>Not Available</span>";
+                return val;
+            }
+             
+            function showProfile(){
+                const petName = "Jack";
+                const age = 4;
+                let breed  = "Golden Retriver";
+                let mood = "Playful and Friendly";
+                 
+                let owner = null;
+                let vaccination = null;
+                let rescueStory;
+
+            
+            {var shealterName = "Dogs Homes";
+            let shealterCode = "HP- 2024";
+        }
+        
+
+        let adoptionAge = 4;
+        let ageMatch = (age == adoptionAge)
+
+        let microchId = "Mc-2024";
+        let scannedChipId = "Mc-2024";
+        let chipMatch = (microchipId == scannedChipId);
+
+        let result = "";
+        result = result + "<div class='row'><span>Breed</span>"  + display(breed) + "</div>";
+        result = result + "<div class='row'><span>Age</span>" + age + "yrs" + "</div>";
+        result = result + "<div class='row'><span>mood</span>" + display(mood) + "</div>";
+          
+        result = result + "<div class='row'><span>Owner</span>" + display(owner) + "</div>";
+        result = result + "<div class='row'><span>Vaccination</span>" + display(vaccination) + "</div>";
+        result = result + "<div class='row'><span>Rescue</span>" + display(rescueStory) + "</div>";
+        result = result + "<div class='row'><span>Shelter</span>" + display(shelterName) + "</div>";
+        result = result + "<div class='row'><span>Age Match</span>" + display(ageMatch) + "</div>";
+        result = result + "<div class='row'><span>chip Match</span>" + display(chipMatch) + "</div>";
+
+        document.getElementById("output").innerHTML = result;
+        document.getElementById("card").style.display = "block";
+
+    }
+        </script>
+    </body>
+</html>
