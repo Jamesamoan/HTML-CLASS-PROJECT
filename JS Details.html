@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p>The String() method can convert a number to a string.</p>
+        <p id="number_result"></p>
+        <p id="string_result"></p>
+        <p id="error_message"></p>
+
+        <script>
+            var x = 70;
+            var y = 90;
+
+            document.getElementById("number_result").innerHTML =x + y;
+
+            document.getElementById("string_result").innerHTML = String(x) + String(y);
+
+            let text = "JavaScript is fun. JavaScript is powerful.";
+
+            let position = text.search(/fun/);
+
+            document.write("Position of 'fun':",position);
+
+            let newText = text.replace(/JavaScript/g, "JS");
+
+            document.write("<br>"+"Original Text:" + "<br>");
+              document.write(text);
+                document.write("<br>");
+                  document.write("\nUpdated Text:" + "<br>");
+                    document.write(newText);
+
+
+
+                    try {
+                        addalert("Welcome guest!");
+                    }
+                    catch(err){
+                        document.getElementById("error_message").innerHTML = err.message;
+                    }
+
+                    document.write("<h2>Arrow Function <h2>")
+                    const add = (a,b) => a+b;
+                    document.write(add(4,6));
+                    document.write("<br>")
+                    const square = (num) => num * num;
+                    document.write(square(5));
+                    
+
+
+        </script>
+    </body>
+</html>
