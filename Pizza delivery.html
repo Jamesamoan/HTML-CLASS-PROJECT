@@ -54,22 +54,22 @@
                 let loadedOrder = JSON.parse(jsonText);
 
                 document.getElementById("json-text").innerHTML = jsonText;
-                  document.getElementById("json-item").innerHTML = loadedOrder;
-                    document.getElementById("loaded-price").innerHTML = "$" + loadOrder.price;
+                  document.getElementById("loaded-item").innerHTML = loadedOrder;
+                    document.getElementById("loaded-price").innerHTML = "$" + loadedOrder.price;
             }
             
             function delay(ms){
                 return new Promise(function(resolve){
-                    seTimeout(resolve, ms);
+                    setTimeout(resolve, ms);
                 });
             }
 
             async function startDelivery(){
                 document.getElementById("result").innerHTML = "";
 
-                document.getElementById("status").innerHTM ="Order received!",
-                setTimeout(Function () {
-                    document.getELementById("status").innerHTM = "Kitchen is perparing...";
+                document.getElementById("status").innerHTML ="Order received!",
+                setTimeout(function() {
+                    document.getElementById("status").innerHTML = "Kitchen is perparing...";
             },1000);
 
             await delay (3000);
